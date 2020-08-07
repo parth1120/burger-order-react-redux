@@ -27,9 +27,6 @@ class Checkout extends Component {
     //     this.setState({ ingredients: ingredients, totalPrice: price })
     // }
 
-    componentWillMount() {
-        this.props.onInitPurchase()
-    }
 
     onCheckoutCancelled = () => {
         this.props.history.goBack();
@@ -66,10 +63,5 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToPops = dispatch => {
-    return {
-        onInitPurchase: () => dispatch(actions.purchaseInit())
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToPops)(Checkout);
+export default connect(mapStateToProps)(Checkout);

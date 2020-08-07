@@ -52,7 +52,7 @@ class ContactData extends Component {
                 validation: {
                     required: true,
                     minLength: 5,
-                    maxLength: 5
+                    maxLength: 6
                 },
                 valid: false,
                 touched: false
@@ -115,7 +115,7 @@ class ContactData extends Component {
             orderData: formData
         }
         this.props.onOrderBurger(body)
-        
+
         // axios.post('/orders.json', body)
         //     .then((e) => {
         //         console.log(e);
